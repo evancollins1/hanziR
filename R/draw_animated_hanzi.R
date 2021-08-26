@@ -18,7 +18,7 @@ draw_animated_hanzi <- function(hanzi, width, align, background_color) {
   # width: A character string for width of figure (e.g., "50%" or "50px"); defaults to "100%"
   # align: A character string for alignment of figure (i.e., "center" or "left"); defaults to "center"
   # background-color: A character string for figure color in CSS format (i.e., color name, HEX value, RGB value, or RGBA value)
-  message("Remember to set code chunk argument: {r, results='asis', message=F}")
+  message("For markdown visuals, remember to set code chunk argument: {r, results='asis', message=F}")
   if(missing(hanzi)){
     stop("hanzi argument blank, i.e., no Chinese character input selected!")
   }

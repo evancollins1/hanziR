@@ -43,18 +43,31 @@ It has the same input arguments as `draw_static_hanzi`.
 
 The first use case is to generate these visuals in R markdown documents. To do this, simply run the `hanziR` function(s) in a code chunk and set the code chunk `knitr` arguments to the following: `results='asis', message=F`.
 
-```{r}
+```{r, results='asis', message=F}
 draw_static_hanzi("陈", width = "50%", align = "center", background_color = "red")
 ```
 
+```{r, results='asis', message=F}
+draw_animated_hanzi("陈", width = "200px", align = "center", background_color = "a86f32")
+```
 
+The second use case is to utilize the `hanzi` package to generate injectable HTML+CSS code for these visuals. This HTML+CSS code could be useful for having greater flexibility in markdown documents and/or building out web deployments. To view this HTML+CSS code, simply run the functions *without* setting the knitr code chunk option `results='asis'`. In other words, simply run the functions in R console or in a code chunk with default options.
 
- For static images, perhaps the user would like to include their name as a stylistic image.
-
+```{r}
+draw_animated_hanzi("陈", width = "200px", align = "left", background_color = "rgb(154, 50, 168)")
+```
 
 ## References
 
 This package refers to the dictionary of .svg files created from the [makemeahanzi](https://github.com/skishore/makemeahanzi) project.
+
+## Future Directions
+
+In the second version of the `hanziR` package, I would like to add the following features:
+
+- Be able to contiguously graph more than one Chinese character and sync stroke order animations
+
+- Be able to repeat stroke order animations and set animation times manually
 
 
 
