@@ -1,0 +1,15 @@
+Package: hanziR
+Title: Show stroke order of Chinese character
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Evan",
+           family = "Collins",
+           role = c("aut", "cre"),
+           email = "evantomcollins@gmail.edu",
+           comment = c(ORCID = "0000-0003-0774-6975"))
+Description: This function generates the injectable HTML+CSS code to show the stroke animation of the specified Chinese character. If preparing a markdown document in RStudio, set code chunk arguments as follows: results='asis', message=F. This package refers to the .svg images prepared from the makemeahanzi Github repository. 
+License: `use_mit_license()`
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
