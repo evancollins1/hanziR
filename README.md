@@ -1,2 +1,2 @@
 # hanziR
-An R package to show stroke order of Chinese characters
+An R package to show the stroke order animations of Chinese characters.
