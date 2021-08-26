@@ -35,7 +35,7 @@ It takes the following input arguments:
 
 - `align`: A character string for alignment of figure (i.e., "center" or "left"); defaults to "center"
 
-- `background-color`: A character string for figure color in CSS format (i.e., color name, HEX value, RGB value, or RGBA value)
+- `background_color`: A character string for figure color in CSS format (i.e., color name, HEX value, RGB value, or RGBA value)
 
 ____
 
@@ -59,7 +59,7 @@ draw_animated_hanzi("陈", width = "200px", align = "center", background_color =
 The second use case is to utilize the `hanzi` package to generate injectable HTML+CSS code for these visuals. This HTML+CSS code could be useful for having greater flexibility in markdown documents and/or building out web deployments. To view this HTML+CSS code, simply run the functions *without* setting the knitr code chunk option `results='asis'`. In other words, simply run the functions in R console or in a code chunk with default options.
 
 ```{r, eval=T}
-draw_animated_hanzi("陈", width = "200px", align = "left", background_color = "rgb(154, 50, 168)")
+draw_animated_hanzi("好", width = "200px", align = "left", background_color = "rgb(154, 50, 168)")
 ```
 
 ## References

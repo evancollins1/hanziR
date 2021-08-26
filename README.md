@@ -33,7 +33,7 @@ It takes the following input arguments:
 -   `align`: A character string for alignment of figure (i.e., “center”
     or “left”); defaults to “center”
 
--   `background-color`: A character string for figure color in CSS
+-   `background_color`: A character string for figure color in CSS
     format (i.e., color name, HEX value, RGB value, or RGBA value)
 
 ------------------------------------------------------------------------
@@ -67,12 +67,12 @@ functions *without* setting the knitr code chunk option
 or in a code chunk with default options.
 
 ``` r
-draw_animated_hanzi("陈", width = "200px", align = "left", background_color = "rgb(154, 50, 168)")
+draw_animated_hanzi("好", width = "200px", align = "left", background_color = "rgb(154, 50, 168)")
 ```
 
     ## For markdown visuals, remember to set code chunk argument: {r, results='asis', message=F}
 
-    ## <left><img src = 'https://raw.githubusercontent.com/skishore/makemeahanzi/master/svgs/38472.svg' style = 'width:200px; background-color:rgb(154, 50, 168); border-radius: 8%'></left>
+    ## <left><img src = 'https://raw.githubusercontent.com/skishore/makemeahanzi/master/svgs/22909.svg' style = 'width:200px; background-color:rgb(154, 50, 168); border-radius: 8%'></left>
 
 ## References
 
