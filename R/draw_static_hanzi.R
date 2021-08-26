@@ -1,7 +1,7 @@
-#' Show static image of Chinese character
+#' Show static image of stroke order of Chinese character
 #'
 #' This function generates the injectable HTML+CSS code to show a static image
-#' of the specified Chinese character. If preparing a markdown
+#' of the stroke order of the specified Chinese character. If preparing a markdown
 #' document in RStudio, set code chunk arguments as follows:
 #' results='asis', message=F
 #'

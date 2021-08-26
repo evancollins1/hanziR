@@ -2,7 +2,7 @@
 % Please edit documentation in R/draw_static_hanzi.R
 \name{draw_static_hanzi}
 \alias{draw_static_hanzi}
-\title{Show static image of Chinese character}
+\title{Show static image of stroke order of Chinese character}
 \usage{
 draw_static_hanzi(hanzi, width, align, background_color)
 }
@@ -20,7 +20,7 @@ HTML+CSS code to generate stroke animation of specified Chinese character
 }
 \description{
 This function generates the injectable HTML+CSS code to show a static image
-of the specified Chinese character. If preparing a markdown
+of the stroke order of the specified Chinese character. If preparing a markdown
 document in RStudio, set code chunk arguments as follows:
 results='asis', message=F
 }

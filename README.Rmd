@@ -4,23 +4,28 @@ output:
     variant: markdown_github
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval=F)
+```
+
 # hanziR
 
-An R package to show static images and dynamic stroke animations of Chinese characters.
+An R package to show stroke order images and stroke order animations of Chinese characters.
 
 To install and load `hanziR`, use the `install_github` function in the `devtools` package.
 
-```{r}
-require(devtools)
-install_github("evancollins1/hanziR")
+```{r, message=F, warning=F, eval=T}
+devtools::install_github("evancollins1/hanziR")
 library(hanziR)
 ```
 
 This simple package has two functions and two use cases.
 
+*Note: Output visuals have been suppressed for this README.md due to Github's restriction on CSS code. All output can be viewed in README.html.*
+
 ## Functions
 
-The function `draw_static_hanzi` produces a static image of the specified Chinese character.
+The function `draw_static_hanzi` produces a stroke order image of the specified Chinese character.
 
 It takes the following input arguments:
 
@@ -44,16 +49,16 @@ It has the same input arguments as `draw_static_hanzi`.
 The first use case is to generate these visuals in R markdown documents. To do this, simply run the `hanziR` function(s) in a code chunk and set the code chunk `knitr` arguments to the following: `results='asis', message=F`.
 
 ```{r, results='asis', message=F}
-draw_static_hanzi("陈", width = "50%", align = "center", background_color = "red")
+draw_static_hanzi("陈", width = "15%", align = "center", background_color = "#a86f32")
 ```
 
 ```{r, results='asis', message=F}
-draw_animated_hanzi("陈", width = "200px", align = "center", background_color = "a86f32")
+draw_animated_hanzi("陈", width = "200px", align = "center", background_color = "red")
 ```
 
 The second use case is to utilize the `hanzi` package to generate injectable HTML+CSS code for these visuals. This HTML+CSS code could be useful for having greater flexibility in markdown documents and/or building out web deployments. To view this HTML+CSS code, simply run the functions *without* setting the knitr code chunk option `results='asis'`. In other words, simply run the functions in R console or in a code chunk with default options.
 
-```{r}
+```{r, eval=T}
 draw_animated_hanzi("陈", width = "200px", align = "left", background_color = "rgb(154, 50, 168)")
 ```
 
@@ -68,8 +73,3 @@ In the second version of the `hanziR` package, I would like to add the following
 - Be able to contiguously graph more than one Chinese character and sync stroke order animations
 
 - Be able to repeat stroke order animations and set animation times manually
-
-
-
-
-

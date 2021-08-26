@@ -1,37 +1,25 @@
 # hanziR
 
-An R package to show static images and dynamic stroke animations of
+An R package to show stroke order images and stroke order animations of
 Chinese characters.
 
 To install and load `hanziR`, use the `install_github` function in the
 `devtools` package.
 
 ``` r
-require(devtools)
-```
-
-    ## Loading required package: devtools
-
-    ## Loading required package: usethis
-
-    ## Error in get(genname, envir = envir) : object 'testthat_print' not found
-
-``` r
-install_github("evancollins1/hanziR")
-```
-
-    ## Skipping install of 'hanziR' from a github remote, the SHA1 (3fdc32b0) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
-
-``` r
+devtools::install_github("evancollins1/hanziR")
 library(hanziR)
 ```
 
 This simple package has two functions and two use cases.
 
+*Note: Output visuals have been suppressed for this README.md due to
+Github’s restriction on CSS code. All output can be viewed in
+README.html.*
+
 ## Functions
 
-The function `draw_static_hanzi` produces a static image of the
+The function `draw_static_hanzi` produces a stroke order image of the
 specified Chinese character.
 
 It takes the following input arguments:
@@ -63,20 +51,12 @@ the code chunk `knitr` arguments to the following:
 `results='asis', message=F`.
 
 ``` r
-draw_static_hanzi("陈", width = "50%", align = "center", background_color = "red")
+draw_static_hanzi("陈", width = "15%", align = "center", background_color = "#a86f32")
 ```
-
-<center>
-<img src = 'https://raw.githubusercontent.com/skishore/makemeahanzi/master/svgs-still/38472-still.svg' style = 'width:50%; background-color:red; border-radius: 8%'>
-</center>
 
 ``` r
-draw_animated_hanzi("陈", width = "200px", align = "center", background_color = "a86f32")
+draw_animated_hanzi("陈", width = "200px", align = "center", background_color = "red")
 ```
-
-<center>
-<img src = 'https://raw.githubusercontent.com/skishore/makemeahanzi/master/svgs/38472.svg' style = 'width:200px; background-color:a86f32; border-radius: 8%'>
-</center>
 
 The second use case is to utilize the `hanzi` package to generate
 injectable HTML+CSS code for these visuals. This HTML+CSS code could be
@@ -90,7 +70,7 @@ or in a code chunk with default options.
 draw_animated_hanzi("陈", width = "200px", align = "left", background_color = "rgb(154, 50, 168)")
 ```
 
-    ## Remember to set code chunk argument: {r, results='asis', message=F}
+    ## For markdown visuals, remember to set code chunk argument: {r, results='asis', message=F}
 
     ## <left><img src = 'https://raw.githubusercontent.com/skishore/makemeahanzi/master/svgs/38472.svg' style = 'width:200px; background-color:rgb(154, 50, 168); border-radius: 8%'></left>
 
