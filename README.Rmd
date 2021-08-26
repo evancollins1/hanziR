@@ -1,3 +1,9 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
 # hanziR
 
 An R package to show static images and dynamic stroke animations of Chinese characters.
